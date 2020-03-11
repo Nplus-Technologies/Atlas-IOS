@@ -1,0 +1,6 @@
+framework module Pods_ATLAS {
+  umbrella header "Pods-ATLAS-umbrella.h"
+
+  export *
+  module * { export * }
+}

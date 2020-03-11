@@ -1,0 +1,818 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04324F7A3D8C32244F6D680A /* Pods_ATLASTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 460418EB30143F3D217A0183 /* Pods_ATLASTests.framework */; };
+		1E2F2D94241755F300D70F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2F2D93241755F300D70F90 /* AppDelegate.swift */; };
+		1E2F2D9B241755F300D70F90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F2D99241755F300D70F90 /* Main.storyboard */; };
+		1E2F2D9E241755F300D70F90 /* ATLAS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E2F2D9C241755F300D70F90 /* ATLAS.xcdatamodeld */; };
+		1E2F2DA0241755F900D70F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F2D9F241755F900D70F90 /* Assets.xcassets */; };
+		1E2F2DA3241755F900D70F90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F2DA1241755F900D70F90 /* LaunchScreen.storyboard */; };
+		1E2F2DAE241755F900D70F90 /* ATLASTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2F2DAD241755F900D70F90 /* ATLASTests.swift */; };
+		1E2F2DB9241755F900D70F90 /* ATLASUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2F2DB8241755F900D70F90 /* ATLASUITests.swift */; };
+		1E2F2DC7241756E200D70F90 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2F2DC6241756E200D70F90 /* SearchView.swift */; };
+		1E2F2DC9241756F500D70F90 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2F2DC8241756F500D70F90 /* SearchVC.swift */; };
+		1E2F2DCE2417573F00D70F90 /* SearchHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2F2DCD2417573F00D70F90 /* SearchHelper.swift */; };
+		1E2F2DD224176DDF00D70F90 /* InternetConnectionCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2F2DD124176DDF00D70F90 /* InternetConnectionCheck.swift */; };
+		3391B4987B915454EA5DB7C5 /* Pods_ATLAS_ATLASUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0005DE613BCE8F7801A608D5 /* Pods_ATLAS_ATLASUITests.framework */; };
+		FA7B23251B366B6B53AA93EF /* Pods_ATLAS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F05E33AFDD5EC1F866523FBD /* Pods_ATLAS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E2F2DAA241755F900D70F90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E2F2D88241755F300D70F90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E2F2D8F241755F300D70F90;
+			remoteInfo = ATLAS;
+		};
+		1E2F2DB5241755F900D70F90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E2F2D88241755F300D70F90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E2F2D8F241755F300D70F90;
+			remoteInfo = ATLAS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0005DE613BCE8F7801A608D5 /* Pods_ATLAS_ATLASUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATLAS_ATLASUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BF52D13FA1CE30AADDD5354 /* Pods-ATLASTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATLASTests.release.xcconfig"; path = "Target Support Files/Pods-ATLASTests/Pods-ATLASTests.release.xcconfig"; sourceTree = "<group>"; };
+		0D454A93ADCFDF17ABCE5697 /* Pods-ATLAS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATLAS.debug.xcconfig"; path = "Target Support Files/Pods-ATLAS/Pods-ATLAS.debug.xcconfig"; sourceTree = "<group>"; };
+		1E2F2D90241755F300D70F90 /* ATLAS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATLAS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E2F2D93241755F300D70F90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E2F2D9A241755F300D70F90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1E2F2D9D241755F300D70F90 /* ATLAS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ATLAS.xcdatamodel; sourceTree = "<group>"; };
+		1E2F2D9F241755F900D70F90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E2F2DA2241755F900D70F90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1E2F2DA4241755F900D70F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E2F2DA9241755F900D70F90 /* ATLASTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATLASTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E2F2DAD241755F900D70F90 /* ATLASTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATLASTests.swift; sourceTree = "<group>"; };
+		1E2F2DAF241755F900D70F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E2F2DB4241755F900D70F90 /* ATLASUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATLASUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E2F2DB8241755F900D70F90 /* ATLASUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATLASUITests.swift; sourceTree = "<group>"; };
+		1E2F2DBA241755F900D70F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E2F2DC6241756E200D70F90 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		1E2F2DC8241756F500D70F90 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		1E2F2DCD2417573F00D70F90 /* SearchHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHelper.swift; sourceTree = "<group>"; };
+		1E2F2DD124176DDF00D70F90 /* InternetConnectionCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionCheck.swift; sourceTree = "<group>"; };
+		1E2F2DD62417A3EB00D70F90 /* Laksaman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Laksaman.ttf; sourceTree = "<group>"; };
+		2D6178E5C0FFE5005FACA667 /* Pods-ATLASTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATLASTests.debug.xcconfig"; path = "Target Support Files/Pods-ATLASTests/Pods-ATLASTests.debug.xcconfig"; sourceTree = "<group>"; };
+		460418EB30143F3D217A0183 /* Pods_ATLASTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATLASTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6089515563C7D8283C9243F0 /* Pods-ATLAS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATLAS.release.xcconfig"; path = "Target Support Files/Pods-ATLAS/Pods-ATLAS.release.xcconfig"; sourceTree = "<group>"; };
+		B84FE4FD3D845D252952F7E0 /* Pods-ATLAS-ATLASUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATLAS-ATLASUITests.debug.xcconfig"; path = "Target Support Files/Pods-ATLAS-ATLASUITests/Pods-ATLAS-ATLASUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF40D76D8B50958B400BEA28 /* Pods-ATLAS-ATLASUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATLAS-ATLASUITests.release.xcconfig"; path = "Target Support Files/Pods-ATLAS-ATLASUITests/Pods-ATLAS-ATLASUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F05E33AFDD5EC1F866523FBD /* Pods_ATLAS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATLAS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E2F2D8D241755F300D70F90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA7B23251B366B6B53AA93EF /* Pods_ATLAS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E2F2DA6241755F900D70F90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04324F7A3D8C32244F6D680A /* Pods_ATLASTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E2F2DB1241755F900D70F90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3391B4987B915454EA5DB7C5 /* Pods_ATLAS_ATLASUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E2F2D87241755F300D70F90 = {
+			isa = PBXGroup;
+			children = (
+				1E2F2D92241755F300D70F90 /* ATLAS */,
+				1E2F2DAC241755F900D70F90 /* ATLASTests */,
+				1E2F2DB7241755F900D70F90 /* ATLASUITests */,
+				1E2F2D91241755F300D70F90 /* Products */,
+				3DC7CB0975D8CBC301A877B3 /* Pods */,
+				6C692A7E812A827877C09D47 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1E2F2D91241755F300D70F90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E2F2D90241755F300D70F90 /* ATLAS.app */,
+				1E2F2DA9241755F900D70F90 /* ATLASTests.xctest */,
+				1E2F2DB4241755F900D70F90 /* ATLASUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E2F2D92241755F300D70F90 /* ATLAS */ = {
+			isa = PBXGroup;
+			children = (
+				1E2F2D93241755F300D70F90 /* AppDelegate.swift */,
+				1E2F2DD32417A3B500D70F90 /* Resource */,
+				1E2F2DCA241756FA00D70F90 /* Singleton Classes */,
+				1E2F2DCF2417574500D70F90 /* SearchView */,
+				1E2F2DD02417575100D70F90 /* SearchViewController */,
+				1E2F2D99241755F300D70F90 /* Main.storyboard */,
+				1E2F2DA1241755F900D70F90 /* LaunchScreen.storyboard */,
+				1E2F2DA4241755F900D70F90 /* Info.plist */,
+				1E2F2D9C241755F300D70F90 /* ATLAS.xcdatamodeld */,
+			);
+			path = ATLAS;
+			sourceTree = "<group>";
+		};
+		1E2F2DAC241755F900D70F90 /* ATLASTests */ = {
+			isa = PBXGroup;
+			children = (
+				1E2F2DAD241755F900D70F90 /* ATLASTests.swift */,
+				1E2F2DAF241755F900D70F90 /* Info.plist */,
+			);
+			path = ATLASTests;
+			sourceTree = "<group>";
+		};
+		1E2F2DB7241755F900D70F90 /* ATLASUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1E2F2DB8241755F900D70F90 /* ATLASUITests.swift */,
+				1E2F2DBA241755F900D70F90 /* Info.plist */,
+			);
+			path = ATLASUITests;
+			sourceTree = "<group>";
+		};
+		1E2F2DCA241756FA00D70F90 /* Singleton Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1E2F2DCD2417573F00D70F90 /* SearchHelper.swift */,
+				1E2F2DD124176DDF00D70F90 /* InternetConnectionCheck.swift */,
+			);
+			path = "Singleton Classes";
+			sourceTree = "<group>";
+		};
+		1E2F2DCF2417574500D70F90 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				1E2F2DC6241756E200D70F90 /* SearchView.swift */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		1E2F2DD02417575100D70F90 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1E2F2DC8241756F500D70F90 /* SearchVC.swift */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		1E2F2DD32417A3B500D70F90 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1E2F2DD42417A3C400D70F90 /* Font */,
+				1E2F2D9F241755F900D70F90 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		1E2F2DD42417A3C400D70F90 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				1E2F2DD62417A3EB00D70F90 /* Laksaman.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		3DC7CB0975D8CBC301A877B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D454A93ADCFDF17ABCE5697 /* Pods-ATLAS.debug.xcconfig */,
+				6089515563C7D8283C9243F0 /* Pods-ATLAS.release.xcconfig */,
+				B84FE4FD3D845D252952F7E0 /* Pods-ATLAS-ATLASUITests.debug.xcconfig */,
+				CF40D76D8B50958B400BEA28 /* Pods-ATLAS-ATLASUITests.release.xcconfig */,
+				2D6178E5C0FFE5005FACA667 /* Pods-ATLASTests.debug.xcconfig */,
+				0BF52D13FA1CE30AADDD5354 /* Pods-ATLASTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6C692A7E812A827877C09D47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F05E33AFDD5EC1F866523FBD /* Pods_ATLAS.framework */,
+				0005DE613BCE8F7801A608D5 /* Pods_ATLAS_ATLASUITests.framework */,
+				460418EB30143F3D217A0183 /* Pods_ATLASTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E2F2D8F241755F300D70F90 /* ATLAS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E2F2DBD241755F900D70F90 /* Build configuration list for PBXNativeTarget "ATLAS" */;
+			buildPhases = (
+				1B29151D32A57B339B48A279 /* [CP] Check Pods Manifest.lock */,
+				1E2F2D8C241755F300D70F90 /* Sources */,
+				1E2F2D8D241755F300D70F90 /* Frameworks */,
+				1E2F2D8E241755F300D70F90 /* Resources */,
+				5C2A966CE84C136DE6B393C0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ATLAS;
+			productName = ATLAS;
+			productReference = 1E2F2D90241755F300D70F90 /* ATLAS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1E2F2DA8241755F900D70F90 /* ATLASTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E2F2DC0241755F900D70F90 /* Build configuration list for PBXNativeTarget "ATLASTests" */;
+			buildPhases = (
+				01A4E3A0D4CF5ADF0AA1BA87 /* [CP] Check Pods Manifest.lock */,
+				1E2F2DA5241755F900D70F90 /* Sources */,
+				1E2F2DA6241755F900D70F90 /* Frameworks */,
+				1E2F2DA7241755F900D70F90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E2F2DAB241755F900D70F90 /* PBXTargetDependency */,
+			);
+			name = ATLASTests;
+			productName = ATLASTests;
+			productReference = 1E2F2DA9241755F900D70F90 /* ATLASTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1E2F2DB3241755F900D70F90 /* ATLASUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E2F2DC3241755F900D70F90 /* Build configuration list for PBXNativeTarget "ATLASUITests" */;
+			buildPhases = (
+				DE69CD79B68E303368F16361 /* [CP] Check Pods Manifest.lock */,
+				1E2F2DB0241755F900D70F90 /* Sources */,
+				1E2F2DB1241755F900D70F90 /* Frameworks */,
+				1E2F2DB2241755F900D70F90 /* Resources */,
+				812706FECB7BF273B5FD53B7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E2F2DB6241755F900D70F90 /* PBXTargetDependency */,
+			);
+			name = ATLASUITests;
+			productName = ATLASUITests;
+			productReference = 1E2F2DB4241755F900D70F90 /* ATLASUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E2F2D88241755F300D70F90 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = spextrum;
+				TargetAttributes = {
+					1E2F2D8F241755F300D70F90 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					1E2F2DA8241755F900D70F90 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 1E2F2D8F241755F300D70F90;
+					};
+					1E2F2DB3241755F900D70F90 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 1E2F2D8F241755F300D70F90;
+					};
+				};
+			};
+			buildConfigurationList = 1E2F2D8B241755F300D70F90 /* Build configuration list for PBXProject "ATLAS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E2F2D87241755F300D70F90;
+			productRefGroup = 1E2F2D91241755F300D70F90 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E2F2D8F241755F300D70F90 /* ATLAS */,
+				1E2F2DA8241755F900D70F90 /* ATLASTests */,
+				1E2F2DB3241755F900D70F90 /* ATLASUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E2F2D8E241755F300D70F90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E2F2DA3241755F900D70F90 /* LaunchScreen.storyboard in Resources */,
+				1E2F2DA0241755F900D70F90 /* Assets.xcassets in Resources */,
+				1E2F2D9B241755F300D70F90 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E2F2DA7241755F900D70F90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E2F2DB2241755F900D70F90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01A4E3A0D4CF5ADF0AA1BA87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ATLASTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B29151D32A57B339B48A279 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ATLAS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C2A966CE84C136DE6B393C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ATLAS/Pods-ATLAS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ATLAS/Pods-ATLAS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ATLAS/Pods-ATLAS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		812706FECB7BF273B5FD53B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ATLAS-ATLASUITests/Pods-ATLAS-ATLASUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ATLAS-ATLASUITests/Pods-ATLAS-ATLASUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ATLAS-ATLASUITests/Pods-ATLAS-ATLASUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE69CD79B68E303368F16361 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ATLAS-ATLASUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E2F2D8C241755F300D70F90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E2F2DC9241756F500D70F90 /* SearchVC.swift in Sources */,
+				1E2F2D94241755F300D70F90 /* AppDelegate.swift in Sources */,
+				1E2F2DC7241756E200D70F90 /* SearchView.swift in Sources */,
+				1E2F2DD224176DDF00D70F90 /* InternetConnectionCheck.swift in Sources */,
+				1E2F2DCE2417573F00D70F90 /* SearchHelper.swift in Sources */,
+				1E2F2D9E241755F300D70F90 /* ATLAS.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E2F2DA5241755F900D70F90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E2F2DAE241755F900D70F90 /* ATLASTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E2F2DB0241755F900D70F90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E2F2DB9241755F900D70F90 /* ATLASUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E2F2DAB241755F900D70F90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E2F2D8F241755F300D70F90 /* ATLAS */;
+			targetProxy = 1E2F2DAA241755F900D70F90 /* PBXContainerItemProxy */;
+		};
+		1E2F2DB6241755F900D70F90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E2F2D8F241755F300D70F90 /* ATLAS */;
+			targetProxy = 1E2F2DB5241755F900D70F90 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1E2F2D99241755F300D70F90 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E2F2D9A241755F300D70F90 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1E2F2DA1241755F900D70F90 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E2F2DA2241755F900D70F90 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E2F2DBB241755F900D70F90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1E2F2DBC241755F900D70F90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E2F2DBE241755F900D70F90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D454A93ADCFDF17ABCE5697 /* Pods-ATLAS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P5ZQ87FXD7;
+				INFOPLIST_FILE = ATLAS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nPlus.ATLAS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E2F2DBF241755F900D70F90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6089515563C7D8283C9243F0 /* Pods-ATLAS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P5ZQ87FXD7;
+				INFOPLIST_FILE = ATLAS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nPlus.ATLAS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1E2F2DC1241755F900D70F90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D6178E5C0FFE5005FACA667 /* Pods-ATLASTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P5ZQ87FXD7;
+				INFOPLIST_FILE = ATLASTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nPlus.ATLASTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ATLAS.app/ATLAS";
+			};
+			name = Debug;
+		};
+		1E2F2DC2241755F900D70F90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BF52D13FA1CE30AADDD5354 /* Pods-ATLASTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P5ZQ87FXD7;
+				INFOPLIST_FILE = ATLASTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nPlus.ATLASTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ATLAS.app/ATLAS";
+			};
+			name = Release;
+		};
+		1E2F2DC4241755F900D70F90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B84FE4FD3D845D252952F7E0 /* Pods-ATLAS-ATLASUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P5ZQ87FXD7;
+				INFOPLIST_FILE = ATLASUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nPlus.ATLASUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ATLAS;
+			};
+			name = Debug;
+		};
+		1E2F2DC5241755F900D70F90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF40D76D8B50958B400BEA28 /* Pods-ATLAS-ATLASUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P5ZQ87FXD7;
+				INFOPLIST_FILE = ATLASUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nPlus.ATLASUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ATLAS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E2F2D8B241755F300D70F90 /* Build configuration list for PBXProject "ATLAS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E2F2DBB241755F900D70F90 /* Debug */,
+				1E2F2DBC241755F900D70F90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E2F2DBD241755F900D70F90 /* Build configuration list for PBXNativeTarget "ATLAS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E2F2DBE241755F900D70F90 /* Debug */,
+				1E2F2DBF241755F900D70F90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E2F2DC0241755F900D70F90 /* Build configuration list for PBXNativeTarget "ATLASTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E2F2DC1241755F900D70F90 /* Debug */,
+				1E2F2DC2241755F900D70F90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E2F2DC3241755F900D70F90 /* Build configuration list for PBXNativeTarget "ATLASUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E2F2DC4241755F900D70F90 /* Debug */,
+				1E2F2DC5241755F900D70F90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1E2F2D9C241755F300D70F90 /* ATLAS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1E2F2D9D241755F300D70F90 /* ATLAS.xcdatamodel */,
+			);
+			currentVersion = 1E2F2D9D241755F300D70F90 /* ATLAS.xcdatamodel */;
+			path = ATLAS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1E2F2D88241755F300D70F90 /* Project object */;
+}
