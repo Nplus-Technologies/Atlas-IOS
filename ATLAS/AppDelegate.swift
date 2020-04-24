@@ -8,12 +8,15 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var locationManager = CLLocationManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -22,7 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = UINavigationController(rootViewController: SearchVC())
         self.window?.makeKeyAndVisible()
         IQKeyboardManager.shared.enable = true
-        IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "Done" 
+        IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "Done"
+        
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
 
         return true
     }
@@ -75,3 +81,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// MARK - CLLocationManager delegate
+
+extension AppDelegate: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        var shouldAllow = false
+        
+        switch status {
+        case CLAuthorizationStatus.restricted:
+            print("Restricted")
+        case CLAuthorizationStatus.denied:
+            print("Authorized denied")
+        case CLAuthorizationStatus.notDetermined:
+            print("Status not determined")
+        default:
+            print("Authorized")
+            shouldAllow = true
+        }
+        
+        if !shouldAllow {
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
+}

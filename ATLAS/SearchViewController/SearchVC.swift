@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class SearchVC: UIViewController {
 
@@ -14,6 +15,9 @@ class SearchVC: UIViewController {
     var searchLocationList: [SearchLocation] = []
     var selectedLocation:((SearchLocation) -> Void)?
 
+    var locationManager = CLLocationManager()
+    var currentLocation: CLLocation!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,6 +38,10 @@ class SearchVC: UIViewController {
         searchView.tableView.delegate = self
         searchView.tableView.dataSource = self
         searchView.tableView.reloadData()
+        
+        locationManager.delegate = self
+        
+        getCurrentLatLng()
     }
     
 // TextField Text Did Change to call this func
@@ -42,20 +50,27 @@ class SearchVC: UIViewController {
             searchView.tableView.isHidden = true
         } else {
             searchView.tableView.isHidden = false
-            SearchHelper.shared.getLocation(inputText: textField.text ?? "", completion: { predictions in
-                self.searchLocationList = predictions.compactMap({
-                    if let googlePlaceId = $0["place_id"] as? String,
-                        let address = $0["description"] as? String,
-                        let structuredFormat = $0["structured_formatting"] as? [String:AnyObject],
-                        let title = structuredFormat["main_text"] as? String {
-                        return SearchLocation(googlePlaceId,title:title,address: address)
+            if currentLocation != nil {
+                let lat = "\(currentLocation.coordinate.latitude)"
+                let lng = "\(currentLocation.coordinate.longitude)"
+                
+                SearchHelper.shared.getLocation(inputText: textField.text ?? "", lat: lat, lng: lng, completion: { predictions in
+                    self.searchLocationList = predictions.compactMap({
+                        if let googlePlaceId = $0["place_id"] as? String,
+                            let address = $0["description"] as? String,
+                            let structuredFormat = $0["structured_formatting"] as? [String:AnyObject],
+                            let title = structuredFormat["main_text"] as? String {
+                            return SearchLocation(googlePlaceId, title:title, address: address)
+                        }
+                        return nil
+                    })
+                    DispatchQueue.main.async {
+                        self.searchView.tableView.reloadData()
                     }
-                    return nil
                 })
-                DispatchQueue.main.async {
-                    self.searchView.tableView.reloadData()
-                }
-            })
+            } else {
+                print("Location not available")
+            }
         }
     }
     
@@ -87,6 +102,33 @@ extension SearchVC : UITableViewDelegate, UITableViewDataSource  {
                 self.searchView.searchResultAddressLbl.text = self.searchLocationList[indexPath.row].placeId
             }
         })
+    }
+    
+}
+
+// MARK - functions
+extension SearchVC {
+    
+    func getCurrentLatLng() {
+        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse || CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways) {
+            locationManager.requestLocation()
+        }
+    }
+    
+}
+
+// MARK - CLLocationManager delegate functions
+extension SearchVC: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        currentLocation = locations.last
+        print("\(currentLocation!)")
+        manager.stopUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
+        manager.stopUpdatingLocation()
     }
     
 }

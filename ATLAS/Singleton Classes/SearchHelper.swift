@@ -29,10 +29,11 @@ class SearchHelper {
     static let shared = SearchHelper()
     static let appFontName = "Laksaman"
 
-    func getLocation(inputText : String, completion:@escaping ([[String: Any]])->()) {
+    func getLocation(inputText : String, lat: String, lng: String, completion:@escaping ([[String: Any]])->()) {
+//        let url = "http://13.56.246.254:3001/places/" + inputText
+        let url = "http://54.215.230.210:3001/places/\(inputText)?lat=\(lat)&lng=\(lng)"
+        print(url)
         if ConnectionCheck.isConnectedToNetwork() {
-            let url = "http://13.56.246.254:3001/places/" + inputText
-            print(url)
             Alamofire.request(url, method: .get, parameters: [:], headers: ["Accept": "application/json"])
                 .responseJSON { response in
                     print(response.result.value as Any)
