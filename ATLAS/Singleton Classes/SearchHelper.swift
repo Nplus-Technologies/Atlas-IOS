@@ -31,7 +31,8 @@ class SearchHelper {
 
     func getLocation(inputText : String, lat: String, lng: String, completion:@escaping ([[String: Any]])->()) {
 //        let url = "http://13.56.246.254:3001/places/" + inputText
-        let url = "http://54.215.230.210:3001/places/\(inputText)?lat=\(lat)&lng=\(lng)"
+        let nUrl = "http://54.215.230.210:3001/places/\(inputText)?lat=\(lat)&lng=\(lng)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        let url = String(describing: nUrl)
         print(url)
         if ConnectionCheck.isConnectedToNetwork() {
             Alamofire.request(url, method: .get, parameters: [:], headers: ["Accept": "application/json"])
@@ -54,7 +55,8 @@ class SearchHelper {
     
     func selectedLocation(placeid : String, completion:@escaping ([String: Any])->()) {
         if ConnectionCheck.isConnectedToNetwork() {
-            let url = "http://13.56.246.254:3001/places/location/" + placeid
+//            let url = "http://13.56.246.254:3001/places/location/" + placeid
+            let url = "http://54.215.230.210:3001/places/\(placeid)"
             print(url)
             Alamofire.request(url, method: .get, parameters: [:], headers: ["Accept": "application/json"])
                 .responseJSON { response in
